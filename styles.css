@@ -1,64 +1,140 @@
-/* 
-    Created on : 23 Mar, 2022, 9:52:58 AM
-    Author     : Bruce Wayne
-*/
+/** Styles inspired by Bootstrap **/ 
+
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300ita‌​lic,400italic,500,500italic,700,700italic,900italic,900);
+
 html, body, html * {
-  font-family: 'Helvetica Neue', 'Segoe UI', 'Roboto', sans-serif;
-  margin: 0;
+    font-family: 'Segoe UI','Helvetica Neue',  'Roboto', sans-serif;
+    margin: 0;
 }
 
-.brand {
-    padding: 10px;
-    width:100%;
-    border-bottom-width: 2px;
-    background-color: #000;
-    color:#fff;
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2
 }
 
-.navbar-items {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
-  border: 1px solid #555;
-  height: 100%;
-  position: fixed; 
-  overflow: auto;
-  display: inline;
+.h1, h1 {
+    font-size: calc(1.375rem + 1.5vw)
 }
 
-.nav-item .nav-link {
-  display: block;
-  color: #000;
-  padding: 8px 16px;
-  text-decoration: none;
-  text-align: center;
-  border-bottom: 1px solid #555;
+.h2, h2 {
+    font-size: calc(1.325rem + .9vw)
 }
 
-.nav-link:last-child{
-  border-bottom: none;
+.h3, h3 {
+    font-size: calc(1.3rem + .6vw)
 }
 
-.nav-item .nav-link:hover {
-  background-color: #555;
-  color: white;
-}
-.active {
-  background-color: #04AA6D;
-  color: white;  
+.h4, h4 {
+    font-size: calc(1.275rem + .3vw)
 }
 
-.body-content {
-    margin-top:20px; 
-    margin-left:20%;
-    padding:1px 16px;
-    height:1000px;
+.h5, h5 {
+    font-size: 1.25rem
 }
 
-.table{
-    padding: 12px;
-    border: 4px;    
+.h6, h6 {
+    font-size: 1rem
 }
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+.flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.button {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    color: white;
+    margin: 6px 3px 6px 0px;
+}
+
+    .button:hover {
+        cursor: pointer;
+    }
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+    .btn-primary:hover {
+        background-color: #0b5ed7;
+        border-color: #0a58ca;
+    }
+
+    .btn-primary:focus {
+        background-color: #0b5ed7;
+        border-color: #0a58ca;
+        box-shadow: 0 0 0 .25rem rgba(49,132,253,.5)
+    }
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+    .btn-secondary:hover {
+        background-color: #5c636a;
+        border-color: #565e64;
+    }
+
+    .btn-secondary:focus {
+        background-color: #5c636a;
+        border-color: #565e64;
+        box-shadow: 0 0 0 .25rem rgba(130,138,145,.5);
+    }
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+    .btn-danger:hover {
+        background-color: #bb2d3b;
+        border-color: #b02a37;
+    }
+
+    .btn-danger:focus {
+        background-color: #bb2d3b;
+        border-color: #b02a37;
+        box-shadow: 0 0 0 .25rem rgba(225,83,97,.5);
+    }

@@ -1,0 +1,76 @@
+/** Styles originally designed for this site **/
+
+.brand {
+    padding: 20px;
+    width: 100%;
+    border-bottom-width: 2px;
+    background-color: #000;
+}
+
+    .brand > a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+.navbar-items {
+    display: flex;
+    position: sticky;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    background-color: #f1f1f1;
+    border: 1px solid #555;
+    height: 50px;
+}
+
+.nav-item {
+    width: 50%;
+    display: flex;
+}
+
+    .nav-item .nav-link {
+        color: #000;
+        list-style-type: none;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-block: 1px solid #555;
+        border-left: 1px solid #555;
+    }
+
+        .nav-item .nav-link:hover {
+            background-color: #555;
+            color: white;
+        }
+
+.nav-link:last-child {
+    border-right: 1px solid #555;
+}
+
+.nav-item .active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.body-content {
+    margin-top: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+.table {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.table-hover > tbody > tr:hover > * {
+    background-color: #d8d8d8;
+    color: #000;
+}
+
+th, td {
+    padding: 12px 20px;
+}
