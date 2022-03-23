@@ -549,3 +549,7 @@ p {
 .ps-5 {
     padding-left: 3rem;
 }
+
+.upper-case {
+    text-transform: uppercase;
+}

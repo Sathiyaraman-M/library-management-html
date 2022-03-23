@@ -60,13 +60,17 @@
     padding: 1px 16px;
 }
 
+.page-title {
+    text-transform: uppercase;
+}
+
 .table {
     border: 1px solid #dee2e6;
     border-collapse: collapse;
     margin-bottom: 1rem;
     color: #212529;
     vertical-align: top;
-    overflow-x:auto;
+    overflow-x: auto;
     padding: .5rem .5rem;
 }
 
@@ -86,3 +90,16 @@
 th, td {
     padding: 12px 20px;
 }
+
+.card {
+    border: 1px solid #d8d8d8;
+    border-radius: 4px;
+    padding: 1.5rem;
+}
+
+    .card > .card-content {
+        display:inline-flex;
+        flex-direction:column;
+        justify-items:center;
+        text-align:left;
+    }
