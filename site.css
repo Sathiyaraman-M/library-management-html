@@ -1,13 +1,17 @@
 /** Styles originally designed for this site **/
 
 .brand {
-    padding: 20px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    border-bottom-width: 2px;
     background-color: #000;
+    position: sticky;
 }
 
     .brand > a {
+        padding: 20px;
         color: #fff;
         text-decoration: none;
         font-weight: 500;
@@ -15,23 +19,19 @@
     }
 
 .navbar-items {
-    display: flex;
-    position: sticky;
-    align-items: center;
-    justify-content: left;
-    width: 100%;
-    background-color: #f1f1f1;
-    border: 1px solid #555;
-    height: 50px;
+    color: #fff;
+    margin-right: 20px;
+    flex-wrap: wrap;
 }
 
 .nav-item {
-    width: 50%;
     display: flex;
+    width: 100%;
+    margin:0;
 }
 
     .nav-item .nav-link {
-        color: #000;
+        color: #fff;
         list-style-type: none;
         padding: 8px 16px;
         text-decoration: none;
@@ -39,7 +39,7 @@
         border-left: 1px solid #555;
     }
 
-        .nav-item .nav-link:hover {
+        .nav-item .nav-link:hover:not(.active) {
             background-color: #555;
             color: white;
         }
@@ -58,12 +58,18 @@
     margin-left: 2%;
     margin-right: 2%;
     padding: 1px 16px;
-    height: 1000px;
 }
 
 .table {
-    border: 1px solid;
+    border: 1px solid #dee2e6;
     border-collapse: collapse;
+    margin-bottom: 1rem;
+    color: #212529;
+    vertical-align: top;
+}
+
+.table > thead > tr {
+    
 }
 
 .table-hover > tbody > tr:hover > * {
