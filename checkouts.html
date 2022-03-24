@@ -9,7 +9,7 @@
     <body>
         <nav>
             <div class="brand">
-                <a href="#">Quark Library Management System</a>
+                <a href="index.html">Quark Library Management System</a>
                 <ul class="navbar-items">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
@@ -24,6 +24,33 @@
         </nav>
         <div class="body-content">
             <h2 class="upper-case">Checkouts</h2>
+            <hr />
+            <div class="d-flex flex-wrap my-2">
+                <button class="button btn-primary">Check In</button>
+                <button class="button btn-secondary mx-2">Reload</button>
+            </div>
+            <div class="p-3" style="border: 1px solid #dee2e6; border-radius: 6px; min-width:200px; max-width: 600px;">
+                <h5 class="upper-case">Add Checkout</h5>
+                <hr />
+                <form>
+                    <div class="d-flex flex-column mt-4">
+                        <label for="regno">Register No</label>
+                        <input id="regno" type="text" class="form-control" />
+                    </div>
+                    <div class="d-flex flex-column mt-4">
+                        <label for="bookid">Book ID</label>
+                        <input id="bookid" type="text" class="form-control" />
+                    </div>
+                    <div class="d-flex flex-column mt-4">
+                        <label for="outdate">Checkout Date</label>
+                        <input id="outdate" type="date" class="form-control" />
+                    </div>
+                    <div class="d-flex flex-wrap mt-2">
+                    <button type="submit" class="button btn-success">Checkout now</button>
+                    <button type="reset" class="button btn-warning mx-2">Reset</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </body>
 </html>
