@@ -26,9 +26,44 @@
             <p>Manage all patrons enrolled in the library</p>
             <hr />
             <div class="d-flex flex-wrap my-2">
-                <button class="button btn-primary">Add Patron</button>
+                <button class="button btn-primary" onclick="showModal()">Add Patron</button>
                 <button class="button btn-secondary mx-2">Reload</button>
             </div>
+
+            <!--Add Book Model-->
+            <div class="modal" id="addModal">
+                <div class="modal-content">
+                    <div class="d-flex" style="justify-content: space-between">
+                        <h4>Add Patron</h4>
+                        <span class="modal-close" onclick="closeModal()">&times;</span>
+                    </div>
+                    <hr />
+                    <form>
+                        <div class="d-flex flex-column mt-4">
+                            <label for="bookid">Register Number</label>
+                            <input id="bookid" type="number" class="form-control" />
+                        </div>
+                        <div class="d-flex flex-column mt-4">
+                            <label for="bookname">Name</label>
+                            <input id="bookname" type="text" class="form-control" />
+                        </div>
+                        <div class="d-flex flex-column mt-4">
+                            <label for="bookauthor">City</label>
+                            <input id="bookauthor" type="text" class="form-control" />
+                        </div>
+                        <div class="d-flex flex-column mt-4">
+                            <label for="bookcopies">Enrolled Date</label>
+                            <input id="bookcopies" type="date" class="form-control" />
+                        </div>
+                        <div class="d-flex flex-wrap mt-2" style="flex-direction: row-reverse">
+                            <button type="reset" class="button btn-warning mx-2">Reset</button>
+                            <button type="submit" class="button btn-success">Book</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!--Patrons Table-->
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -103,5 +138,17 @@
                 </tbody>
             </table>
         </div>
+
+        <script>
+            const modal = document.getElementById("addModal");
+
+            function showModal() {
+                modal.style.display = "block";
+            }
+
+            function closeModal() {
+                modal.style.display = "none";
+            }
+        </script>
     </body>
 </html>

@@ -6,48 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
 </head>
-    <body>
-        <nav>
-            <div class="brand">
-                <a href="index.html">Quark Library Management System</a>
-                <ul class="navbar-items">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                        <a class="nav-link" href="books.html">Books</a>
-                        <a class="nav-link" href="patrons.html">Patrons</a>
-                        <a class="nav-link active" href="checkouts.html">Checkouts</a>
-                        <a class="nav-link" href="aboutus.html">About us</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        <div class="body-content">
-            <h2 class="upper-case">Checkouts</h2>
-            <hr />
-            <div class="d-flex flex-column col-5 p-3 my-2" style="border: 1px solid #dee2e6; border-radius: 6px; max-width:500px">
-                <h5 class="upper-case">Add Checkout</h5>
+<body>
+    <nav>
+        <div class="brand">
+            <a href="index.html">Quark Library Management System</a>
+            <ul class="navbar-items">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="books.html">Books</a>
+                    <a class="nav-link" href="patrons.html">Patrons</a>
+                    <a class="nav-link active" href="checkouts.html">Checkouts</a>
+                    <a class="nav-link" href="aboutus.html">About us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="body-content">
+        <h2 class="upper-case">Checkouts</h2>
+        <hr />
+
+        <!--Modals begin-->
+        <div class="modal" id="checkoutModal">
+            <div class="modal-content" style="border: 1px solid #dee2e6">
+                <div class="d-flex" style="justify-content: space-between">
+                    <h4>Add Checkout</h4>
+                    <span class="modal-close" onclick="closeCheckoutModal()">&times;</span>
+                </div>
                 <hr />
                 <form>
-                    <div class="d-flex flex-column mt-4">
+                    <div class="d-flex flex-column mt-2">
                         <label for="regno">Register No</label>
                         <input id="regno" type="text" class="form-control" />
                     </div>
-                    <div class="d-flex flex-column mt-4">
+                    <div class="d-flex flex-column mt-2">
                         <label for="bookid">Book ID</label>
                         <input id="bookid" type="text" class="form-control" />
                     </div>
-                    <div class="d-flex flex-column mt-4">
+                    <div class="d-flex flex-column mt-2">
                         <label for="outdate">Checkout Date</label>
                         <input id="outdate" type="date" class="form-control" />
                     </div>
-                    <div class="d-flex flex-wrap mt-2">
-                        <button type="submit" class="button btn-success">Checkout now</button>
-                        <button type="reset" class="button btn-warning mx-2">Reset</button>
+                    <div class="d-flex flex-wrap mt-2" style="flex-direction:row-reverse">
+                        <button type="reset" class="button btn-warning">Reset</button>
+                        <button type="submit" class="button btn-success mx-2">Checkout now</button>
                     </div>
                 </form>
             </div>
-            <div class="d-flex flex-column col-5 p-3 my-2" style="border: 1px solid #dee2e6; border-radius: 6px; max-width: 500px">
-                <h5 class="upper-case">Check In Book</h5>
+        </div>
+        <div class="modal" id="checkinModal">            
+            <div class="modal-content" style="border: 1px solid #dee2e6">
+                <div class="d-flex" style="justify-content: space-between">
+                    <h4>Add Checkout</h4>
+                    <span class="modal-close" onclick="closeCheckinModal()">&times;</span>
+                </div>
                 <hr />
                 <form>
                     <div class="d-flex flex-column mt-4">
@@ -64,89 +75,112 @@
                     </div>
                 </form>
             </div>
-            <hr />
-            <h4 class="mt-2">Checkouts History</h4>
-            <button class="button btn-secondary">Reload</button>
-            <table class="table table-hover">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th width="300px">Book Name</th>
-                        <th width="200px">Patron</th>
-                        <th>Out Date</th>
-                        <th>Expected In Date</th>
-                        <th>Actual In Date</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="text-center">1</td>
-                        <td>Dune</td>
-                        <td>Barry Allen</td>
-                        <td class="text-center">12/12/2004</td>
-                        <td class="text-center">13/12/2004</td>
-                        <td class="text-center">14/12/2004</td>
-                        <td style="padding:0 !important">
-                            <button class="button btn-success">Check In</button>
-                            <button class="button btn-warning">Edit</button>
-                            <button class="button btn-danger">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">2</td>
-                        <td>Lord of the Rings</td>
-                        <td>Clark Kent</td>
-                        <td class="text-center">12/12/2004</td>
-                        <td class="text-center">13/12/2004</td>
-                        <td class="text-center">14/12/2004</td>
-                        <td style="padding:0 !important">
-                            <button class="button btn-success">Check In</button>
-                            <button class="button btn-warning">Edit</button>
-                            <button class="button btn-danger">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">3</td>
-                        <td>Harry Potter and the Sorcerer's Stone</td>
-                        <td>Diane Prince</td>
-                        <td class="text-center">12/12/2004</td>
-                        <td class="text-center">13/12/2004</td>
-                        <td class="text-center">14/12/2004</td>
-                        <td style="padding:0 !important">
-                            <button class="button btn-success">Check In</button>
-                            <button class="button btn-warning">Edit</button>
-                            <button class="button btn-danger">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">4</td>
-                        <td>Dune</td>
-                        <td>Bruce Wayne</td>
-                        <td class="text-center">12/12/2004</td>
-                        <td class="text-center">13/12/2004</td>
-                        <td class="text-center">14/12/2004</td>
-                        <td style="padding:0 !important">
-                            <button class="button btn-success">Check In</button>
-                            <button class="button btn-warning">Edit</button>
-                            <button class="button btn-danger">Delete</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">5</td>
-                        <td>Lord of the Rings</td>
-                        <td>Barry Allen</td>
-                        <td class="text-center">12/12/2004</td>
-                        <td class="text-center">13/12/2004</td>
-                        <td class="text-center">14/12/2004</td>
-                        <td style="padding:0 !important">
-                            <button class="button btn-success">Check In</button>
-                            <button class="button btn-warning">Edit</button>
-                            <button class="button btn-danger">Delete</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
-    </body>
+        <!--Modals end-->
+
+        <button class="button btn-primary" onclick="showCheckoutModal()">Add Checkout</button>
+        <button class="button btn-secondary">Reload</button>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th width="300px">Book Name</th>
+                    <th width="200px">Patron</th>
+                    <th>Out Date</th>
+                    <th>Expected In Date</th>
+                    <th>Actual In Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center">1</td>
+                    <td>Dune</td>
+                    <td>Barry Allen</td>
+                    <td class="text-center">12/12/2004</td>
+                    <td class="text-center">13/12/2004</td>
+                    <td class="text-center">14/12/2004</td>
+                    <td style="padding:0 !important">
+                        <button class="button btn-success" onclick="showCheckinModal()">Check In</button>
+                        <button class="button btn-warning">Edit</button>
+                        <button class="button btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">2</td>
+                    <td>Lord of the Rings</td>
+                    <td>Clark Kent</td>
+                    <td class="text-center">12/12/2004</td>
+                    <td class="text-center">13/12/2004</td>
+                    <td class="text-center">14/12/2004</td>
+                    <td style="padding:0 !important">
+                        <button class="button btn-success" onclick="showCheckinModal()">Check In</button>
+                        <button class="button btn-warning">Edit</button>
+                        <button class="button btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">3</td>
+                    <td>Harry Potter and the Sorcerer's Stone</td>
+                    <td>Diane Prince</td>
+                    <td class="text-center">12/12/2004</td>
+                    <td class="text-center">13/12/2004</td>
+                    <td class="text-center">14/12/2004</td>
+                    <td style="padding:0 !important">
+                        <button class="button btn-success" onclick="showCheckinModal()">Check In</button>
+                        <button class="button btn-warning">Edit</button>
+                        <button class="button btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">4</td>
+                    <td>Dune</td>
+                    <td>Bruce Wayne</td>
+                    <td class="text-center">12/12/2004</td>
+                    <td class="text-center">13/12/2004</td>
+                    <td class="text-center">14/12/2004</td>
+                    <td style="padding:0 !important">
+                        <button class="button btn-secondary" disabled>Checked In</button>
+                        <button class="button btn-warning">Edit</button>
+                        <button class="button btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center">5</td>
+                    <td>Lord of the Rings</td>
+                    <td>Barry Allen</td>
+                    <td class="text-center">12/12/2004</td>
+                    <td class="text-center">13/12/2004</td>
+                    <td class="text-center">14/12/2004</td>
+                    <td style="padding:0 !important">
+                        <button class="button btn-success" onclick="showCheckinModal()">Check In</button>
+                        <button class="button btn-warning">Edit</button>
+                        <button class="button btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>onlanguagechange
+        const checkoutModal = document.getElementById("checkoutModal");
+        const checkinModal = document.getElementById("checkinModal");
+
+        function showCheckoutModal() {
+            checkoutModal.style.display = "block";
+        }
+
+        function showCheckinModal() {
+            checkinModal.style.display = "block";
+        }
+
+        function closeCheckoutModal() {
+            checkoutModal.style.display = "none";
+        }
+
+        function closeCheckinModal() {
+            checkinModal.style.display = "none";
+        }
+    </script>
+</body>
 </html>

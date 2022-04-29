@@ -26,9 +26,44 @@
             <p>Manage all books in the library</p>
             <hr/>
             <div class="d-flex flex-wrap my-2">
-                <button class="button btn-primary">Add Book</button>
+                <button class="button btn-primary" onclick="showModal()">Add Book</button>
                 <button class="button btn-secondary mx-2">Reload</button>
             </div>
+
+            <!--Add Book Model-->
+            <div class="modal" id="addModal">
+                <div class="modal-content">
+                    <div class="d-flex" style="justify-content: space-between">
+                        <h4>Add Book</h4>
+                        <span class="modal-close" onclick="closeModal()">&times;</span>
+                    </div>
+                    <hr />
+                    <form>
+                        <div class="d-flex flex-column mt-4">
+                            <label for="bookid">Book ID</label>
+                            <input id="bookid" type="number" class="form-control" />
+                        </div>
+                        <div class="d-flex flex-column mt-4">
+                            <label for="bookname">Book Title</label>
+                            <input id="bookname" type="text" class="form-control" />
+                        </div>
+                        <div class="d-flex flex-column mt-4">
+                            <label for="bookauthor">Author</label>
+                            <input id="bookauthor" type="text" class="form-control" />
+                        </div>
+                        <div class="d-flex flex-column mt-4">
+                            <label for="bookcopies">Copies</label>
+                            <input id="bookcopies" type="number" class="form-control" />
+                        </div>
+                        <div class="d-flex flex-wrap mt-2" style="flex-direction: row-reverse">
+                            <button type="reset" class="button btn-warning mx-2">Reset</button>
+                            <button type="submit" class="button btn-success">Book</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!--Books Table-->
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -73,5 +108,17 @@
                 </tbody>
             </table>
         </div>
+
+        <script>
+            const modal = document.getElementById("addModal");
+
+            function showModal() {
+                modal.style.display = "block";
+            }
+
+            function closeModal() {
+                modal.style.display = "none";
+            }
+        </script>
     </body>
 </html>
